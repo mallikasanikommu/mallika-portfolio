@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #003344; /* navy */
+    overflow-x: hidden;
+}
+
+/* ------------------ NAVBAR ------------------ */
+nav {
+    padding: 15px 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 700;
+    color: #004d40;
+}
+
+.logo span {
+    background: linear-gradient(180deg, #00acc1, #00838f);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.menubar {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menubar li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #004d40; /* dark teal */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menubar li a:hover {
+    color: #00838f;
+}
+
+/* ------------------ BUTTONS ------------------ */
+.btn {
+    display: inline-block;
+    background: #006064;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #00838f;
+    box-shadow: 0 4px 15px rgba(0, 131, 143, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ------------------ SECTION 1 ------------------ */
+.sec1 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px;
+    background: linear-gradient(120deg, #e0f7fa 0%, #80deea 100%);
+    gap: 80px;
+}
+
+.content {
+    max-width: 600px;
+}
+
+h3 {
+    font-size: 50px;
+    color: #003344;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 32px;
+    color: #003344;
+    max-width: 650px;
+    line-height: 45px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #003344;
+}
+
+.s122 {
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 15px;
+    -webkit-text-stroke: 1px #00838f;
+    background: linear-gradient(180deg, #4dd0e1 0%, #00acc1 50%, #00838f 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    animation: moveText 3s linear infinite;
+}
+
+@keyframes moveText {
+    0% { background-position: -20rem 0; }
+    100% { background-position: 20rem 0; }
+}
+
+.btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btns a, .btns button {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+/* IMAGE */
+.s11 img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #00838f;
+    box-shadow: 0px 0px 20px rgba(0,131,143,0.3);
+}
+
+/* SOCIAL ICONS */
+.media img {
+    width: 38px;
+    margin-right: 12px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.media img:hover {
+    transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 992px) {
+    nav { padding: 10px 20px; }
+    .menubar li a { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+    .sec1 {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;  
+    }
+    .s11 img {
+        width: 260px;
+        height: 260px;
+        margin-top: 30px;
+    }
+    h3 { font-size: 45px; }
+    h1 { font-size: 26px; margin-top: 10px; }
+    p { margin: 20px auto; font-size: 18px; }
+    .btns { justify-content: center; width: 100%; gap: 15px; }
+}
+
+@media (max-width: 480px) {
+    h3 { font-size: 34px; }
+    h1 { font-size: 22px; }
+    .s122 { font-size: 18px; }
+    .s11 img { width: 220px; height: 220px; }
+}

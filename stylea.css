@@ -1,0 +1,40 @@
+.about {
+    padding: 80px 5%;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: #003344;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #004d40;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+.about-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #00838f;
+    box-shadow: 0 8px 25px rgba(0, 131, 143, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
